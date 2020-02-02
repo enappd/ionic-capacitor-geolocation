@@ -1,0 +1,8 @@
+{
+  "name": "ionic-capacitor-geolocation",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

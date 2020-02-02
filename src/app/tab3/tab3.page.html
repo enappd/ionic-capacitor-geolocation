@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Track User Location
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Tracked Location</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>You are continously tracking user location. This can eat up device battery. Here's the current location</p>
+      <ion-row>
+        <ion-text class="coords">My Latitude : {{lat}}</ion-text>
+      </ion-row>
+      <ion-row>
+        <ion-text class="coords">My Longitude : {{lng}}</ion-text>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-button color="success" (click)="track()" expand="full" class="ion-margin">Track My Location
+  </ion-button>
+  <ion-button color="danger" (click)="stopTracking()" expand="full" class="ion-margin">Stop Tracking
+  </ion-button>
+</ion-content>

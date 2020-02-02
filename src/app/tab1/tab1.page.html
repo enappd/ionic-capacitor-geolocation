@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Geolocation
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+
+    <ion-card-header>
+      <ion-card-subtitle>Get coordinates</ion-card-subtitle>
+      <ion-card-title>Geolocation</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Click to get your device's location in Latitude and Longitude. Allow the app the required permissions once
+        asked.</p>
+      <ion-row *ngIf="coords && coords.latitude">
+        <ion-text class="coords">My Latitude : {{coords.latitude}}</ion-text>
+      </ion-row>
+      <ion-row *ngIf="coords && coords.longitude">
+        <ion-text class="coords">My Longitude : {{coords.longitude}}</ion-text>
+      </ion-row>
+      <ion-button (click)="locate()" expand="full">Locate Me</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="welcome-card">
+
+    <ion-card-header>
+      <ion-card-subtitle>Get Address</ion-card-subtitle>
+      <ion-card-title>Reverse Geocoding</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Convert your current location into address</p>
+      <ion-row *ngIf="address">
+        <ion-text class="coords">My Address : {{address.subLocality ? address.subLocality +', ' : ''}}
+          {{address.locality ? address.locality +', ' : ''}}{{address.administrativeArea ? address.administrativeArea +', ' : ''}}
+          {{address.postalCode ? address.postalCode +', ' : ''}}{{address.countryName ? address.countryName : ''}}
+        </ion-text>
+      </ion-row>
+      <ion-button (click)="reverseGeocode()" expand="full">Get My Address</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
