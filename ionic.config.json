@@ -1,8 +1,7 @@
 {
-  "name": "ionic-capacitor-geolocation",
+  "name": "IonicGeo",
   "integrations": {
-    "capacitor": {},
-    "cordova": {}
+    "capacitor": {}
   },
-  "type": "angular"
+  "type": "react"
 }
