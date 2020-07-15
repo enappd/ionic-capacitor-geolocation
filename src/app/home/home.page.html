@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Geolocation
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15" [disableDefaultUI]="false">
+    <agm-marker [latitude]="lat" [longitude]="lng" [markerDraggable]=true></agm-marker>
+  </agm-map>
+  <ion-row>
+    <ion-col>Latitude: {{lat}}</ion-col>
+    <ion-col>Longitude: {{lng}}</ion-col>
+  </ion-row>
+</ion-content>
+<ion-footer>
+  <ion-button expand="full" color="primary" (click)="getMyLocation()">Get My Location</ion-button>
+</ion-footer>
